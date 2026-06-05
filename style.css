@@ -1,0 +1,402 @@
+body{
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #36ABD9;
+    padding-top: 70px;
+    font-family: 'Poppins', sans-serif; 
+    
+}
+
+h1{
+    margin: 20px;
+    text-align: center;
+    font-family: 'Baloo 2', sans-serif;
+}
+
+h5{
+    font-family: 'Baloo 2', sans-serif;
+}
+
+h2{
+    margin: 20px;
+    text-align: center;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: bold;
+}
+
+h3{
+    margin: 20px;
+    text-align: center;
+    font-family: 'Baloo 2', sans-serif;
+}
+
+.custom-nav {
+    background-color: #7A178C !important;
+    font-size: 24px;
+}
+
+.custom-nav .nav-link {
+    color: #ffffff !important;
+    opacity: 1 !important; 
+}
+
+
+.custom-nav .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.custom-nav .navbar-toggler {
+    border-color: rgba(255, 255, 255, 1) !important;
+    opacity: 1 !important;
+}
+
+/* Estilos Gerais para os dois botões da Navbar */
+.btn-login, .btn-cadastro {
+    font-weight: 600; /* Deixa a fonte mais grossinha e marcada */
+    padding: 8px 24px; /* Ajusta o espaçamento interno para dar um formato bonito */
+    font-size: 1.1rem; /* Aumenta um pouco o tamanho do texto */
+    border: none !important; /* Remove qualquer borda padrão */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Cria a sombra escura embaixo do botão */
+    transition: all 0.2s ease; /* Efeito suave ao passar o mouse */
+}
+
+/* Botão "Entre" (Branco com texto Roxo) */
+.btn-login {
+    background-color: #ffffff !important;
+    color: #6d2727 !important; /* Cor do seu texto roxo/vinho */
+}
+
+/* Botão "Cadastre-se" (Laranja com texto Roxo) */
+.btn-cadastro {
+    background-color: #f38300 !important; /* Tom de laranja vibrante aproximado da imagem */
+    color: #6d2727 !important; /* Mesma cor roxo/vinho para o texto */
+}
+
+/* Efeito opcional: os botões dão uma leve "afundada" ao serem clicados */
+.btn-login:active, .btn-cadastro:active {
+    transform: translateY(2px);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+#projeto {
+    background-image: url(img/fundo_1.png);
+    background-repeat: no-repeat;
+    
+    /* 2. Centraliza a imagem na tela */
+    background-position: center;
+    
+    /* 3. Força a imagem a esticar/encolher para cobrir todo o espaço sem distorcer */
+    background-size: cover;
+    
+    /* 4. Garante que a section tenha, no mínimo, a altura total da tela visível */
+    min-height: 100vh;
+
+    background-color: #1a365d;
+    
+}
+
+/* --- Estilização Geral da Seção --- */
+#projeto {
+    background-image: url(img/background.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain; /* <--- Mudamos de cover para contain para a imagem nunca cortar */
+    
+    /* MÁGICA DA PROPORÇÃO: Substitua os valores abaixo pela largura e altura REAIS da sua imagem fundo_1.png */
+    /* Exemplo: Se sua imagem tem 1920px de largura por 1080px de altura: */
+    aspect-ratio: 1440 / 1185; 
+
+    width: 100%;
+    text-align: center;
+    color: white;
+
+    /* Usaremos CSS Grid aqui para estruturar os blocos de texto e os cards */
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Cria zonas controladas: uma pro H1/P, outra pro H2 e outra pros Cards */
+    align-content: start; 
+    
+    /* PADDINGS CONTROLADOS: Ajuste as porcentagens para empurrar o conteúdo exatamente para onde quer */
+    padding-top: 5%; 
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#projeto h1 {
+    font-size: 3.4rem; /* Equivalente aos 55px do Figma */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#projeto p {
+    font-size: 1.8rem; /* Equivalente aos 30px do Figma */
+    line-height: 1.6;  /* Dá um respiro excelente entre as linhas lidas */
+    max-width: 900px;  /* Evita que o texto estique muito para as pontas e fique cansativo de ler */
+    margin: 0 auto;
+}
+
+#projeto h2 {
+
+    color: #4a148c;     /* Mantendo a sua cor roxa/vinho do design */
+    margin-top: 240px;   /* Tiramos o 42vh e colocamos um espaço limpo e fixo */
+    margin-bottom: 20px; 
+    font-size: 45px;
+    font-weight: bold;
+}
+
+
+/* --- Alinhamento dos Cards com CSS Grid --- */
+.container-cards {
+    display: grid;
+    /* Cria 3 colunas iguais se houver espaço, ou ajusta se a tela encolher */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 240px));
+    justify-content: center; /* Centraliza o grid na tela */
+    gap: 200px;              /* Espaço entre os cards */
+    
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* --- Estilo de cada Card Branco --- */
+/* --- Estilo de cada Card Branco --- */
+.card {
+    background-color: white;
+    color: #4a148c;          
+    border-radius: 20px;     
+    width: 240px;            /* Ajustei ligeiramente a largura para dar mais respiro ao texto */
+    padding: 35px 20px;      
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); 
+    
+    /* MÁGICA DO ALINHAMENTO INTERNO: */
+    display: flex;
+    flex-direction: column;  /* Alinha os itens um abaixo do outro */
+    align-items: center;     /* Centraliza tudo horizontalmente de forma perfeita */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center;
+}
+
+/* --- Estilo do Círculo Laranja --- */
+.icone {
+    background-color: #ff9100; 
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;      
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* MARGENS CORRIGIDAS: */
+    margin-top: 0;
+    margin-bottom: 20px;     /* Espaço fixo entre o círculo e o número (+1000) */
+    
+    border: 3px solid white;  
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Ajuste dos Textos internos --- */
+.card h3 {
+    font-size: 2.2rem;       /* Destaca um pouco mais o número */
+    color: #4a148c;
+    margin: 0 0 10px 0;      /* Margem apenas na parte inferior para afastar do texto descritivo */
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #6a1b9a;          
+    margin: 0;               /* Remove margens extras que o navegador possa criar */
+    line-height: 1.3;        /* Melhora o espaçamento caso o texto quebre em duas linhas */
+}
+
+/* ==========================================================================
+   5. ESTILIZAÇÃO DE ÚLTIMAS NOTÍCIAS
+   ========================================================================== */
+#noticias {
+    background-color: #ffffff; /* Garante fundo branco para contrastar */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.titulo-noticias {
+    color: #7A178C; /* Roxo padrão do projeto */
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.noticia-item {
+    border-bottom: 1px solid #e0e0e0; /* Linha fina cinza divisória */
+    margin-bottom: 15px;
+}
+
+.noticia-item:last-child {
+    border-bottom: none; /* Remove a última linha para não colar com o rodapé */
+}
+
+.noticia-item h3 {
+    color: #7A178C;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0;
+    max-width: 80%;
+}
+
+.noticia-item p {
+    color: #555555;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.ler-mais {
+    color: #f38300; /* Laranja */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.ler-mais:hover {
+    color: #d17000;
+}
+
+.mais-noticias {
+    color: #36ABD9; /* Azul do fundo anterior */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   6. ESTILIZAÇÃO DO FOOTER ONDULADO
+   ========================================================================== */
+
+   .footer-custom {
+    /* Troque aqui pelo nome exato do novo arquivo de imagem maior que você salvou */
+    background-image: url("img/Frame1.png"); 
+    
+    /* Configurações para a imagem se comportar perfeitamente */
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 100%; /* Força a imagem a esticar de ponta a ponta, tanto na largura quanto na altura total do footer */
+
+    /* Remove qualquer cor de fundo antiga para não dar conflito */
+    background-color: transparent; 
+
+    /* Margem negativa sutil para colar perfeitamente na seção branca de notícias */
+    margin-top: -5px; 
+
+    /* Espaçamentos internos para garantir que os textos fiquem na posição correta */
+    padding-top: 180px; 
+    padding-bottom: 60px;
+    color: white;
+}
+
+
+/* Criando as linhas verticais brancas entre as colunas */
+.footer-col {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza no mobile */
+}
+
+.footer-col {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    /* Força tudo dentro da coluna a se alinhar verticalmente pelo centro */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
+/* Ajuste para que as listas (ul) também centralizem seus itens internos */
+.footer-col ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Garante que os ícones fiquem centralizados sem margens que empurrem para o lado */
+/* Transforma o container em uma área invisível e centralizada para a sua imagem */
+.footer-icon-circle {
+    width: 65px;          /* Mantém uma largura padrão para a imagem */
+    height: 65px;         /* Mantém uma altura padrão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto; /* Centraliza horizontalmente e dá espaço para o texto abaixo */
+    
+    /* REMOVIDO: Tiramos as bordas, fundos e sombras antigas */
+    border: none !important;
+    background-color: transparent !important;
+}
+
+/* Garante que a sua imagem com círculo ocupe o espaço correto sem cortar */
+.footer-icon-circle img {
+    width: 100%;          /* Faz a imagem preencher os 65px definidos acima */
+    height: 100%;
+    object-fit: contain;  /* Garante que o círculo da imagem não distorça */
+}
+
+.footer-custom h5 {
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.footer-custom ul li {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Estilo para os links sublinhados do rodapé */
+.footer-custom ul li a {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-custom ul li a:hover {
+    color: #ff9100;
+}
+
+/* Mini Mapa Simulado do Canto Direito */
+/* Container que segura o mapa (mantém o tamanho fixo, borda branca e sombra) */
+.mapa-container {
+    width: 150px;
+    height: 85px;
+    position: relative;
+    overflow: hidden; /* ESSENCIAL: força a imagem a respeitar os cantos arredondados do container */
+    border: 2px solid white;
+    background-color: #e5e3df; /* Fundo neutro caso a imagem demore a carregar */
+}
+
+/* Nova regra para a imagem do mapa se adaptar ao tamanho do container */
+.mapa-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher todo o espaço sem distorcer, cortando as sobras se necessário */
+    display: block;
+}
+
+/* REMOVIDO: Você pode apagar as regras antigas do '.mapa-ruas' e '.mapa-pin' se não for mais usar o pin por cima */
+#final {
+    background-color: white;
+}
+
+/* Garante que QUALQUER imagem dentro da caixinha do ícone se ajuste perfeitamente */
+.icone img {
+    width: 49px;          /* Ajusta a largura para caber no círculo de 65px */
+    height: 49px;         /* Mantém a proporção quadradinha dos ícones */
+    object-fit: contain;  /* Garante que a imagem não distorça ou fique esticada */
+}

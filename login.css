@@ -1,0 +1,428 @@
+/* Configuração global da página */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('img/Login.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%; 
+    background-attachment: fixed; 
+    min-height: 100vh;
+}
+
+/* Fundo Exclusivo da Página de Denúncia */
+body#denuncia {
+    background-image: url('img/Denúncia.png') !important;
+}
+
+.metade-esquerda-fundo {
+    background-repeat: no-repeat;
+    background-position: left center; 
+    background-size: cover; 
+    min-height: 40vh; 
+    position: relative; /* Crucial para a logo flutuante */
+}
+
+/* SEGREDO AQUI: Se a metade esquerda estiver DENTRO do body normal, usa o fundo do Login */
+body .metade-esquerda-fundo {
+    background-image: url('img/Login.png');
+}
+
+/* SEGREDO AQUI 2: Se a metade esquerda estiver DENTRO do body#denuncia, usa o fundo de Denúncia */
+body#denuncia .metade-esquerda-fundo {
+    background-image: url('img/Denúncia.png') !important;
+}
+
+body#resgate .metade-esquerda-fundo {
+    background-image: url('img/Resgate.png') !important;
+}
+
+/* No computador, a metade esquerda ganha altura total */
+@media (min-width: 768px) {
+    .metade-esquerda-fundo {
+        min-height: 100vh;
+    }
+}
+
+/* Configuração da Logo Clicável */
+/* Configuração da Logo Clicável */
+.logo-superior-esquerda {
+    position: absolute;
+    
+    /* 1. MUDAR A POSIÇÃO VERTICAL (Para cima e para baixo) */
+    /* Aumente esse número para descer a logo, diminua para subir */
+    top: 90px;    /* Estava 25px. Coloquei 40px para afastar mais do teto */
+    
+    /* 2. MUDAR A POSIÇÃO HORIZONTAL (Para a esquerda e para a direita) */
+    /* Aumente esse número para empurrar a logo mais para a direita (em direção aos animais) */
+    left: 40px;   /* Estava 25px. Coloquei 40px para empurrar mais para o centro */
+    
+    z-index: 10;  
+    transition: transform 0.2s ease; 
+}
+
+/* 3. AUMENTAR O TAMANHO DA IMAGEM */
+.logo-superior-esquerda img {
+    /* Mude aqui para aumentar ou diminuir o tamanho total da logo */
+    max-width: 440px; /* Estava 150px. Mudei para 220px para deixá-la bem maior */
+    height: auto;     /* Mantém a proporção correta para não distorcer */
+}
+
+/* Efeito visual de clique: Dá um leve zoom quando o usuário passa o mouse */
+.logo-superior-esquerda:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+/* No computador, a metade esquerda ganha altura total */
+@media (min-width: 768px) {
+    .metade-esquerda-fundo {
+        min-height: 100vh;
+    }
+}
+
+/* ESTILIZAÇÃO DA METADE DIREITA (CINZA DO FIGMA) */
+.metade-direita-login {
+    background-color: #F4F4F4 !important; /* Cor exata de fundo do seu Figma */
+    min-height: 60vh;
+}
+
+@media (min-width: 768px) {
+    .metade-direita-login {
+        min-height: 100vh;
+    }
+}
+
+/* Card Branco Centralizado */
+/* Card Branco Expandido */
+/* Card Branco Expandido */
+.card-login {
+    background-color: #ffffff;
+    width: 760px; 
+    height: 760px; 
+    border: none;
+    
+    /* CONTROLANDO O PREENCHIMENTO: */
+    /* Diminuímos o padding lateral (de md-5 que gera muito espaço para 40px) */
+    /* e aumentamos o do topo/fundo para equilibrar o design */
+    padding: 60px 40px !important; 
+}
+
+/* Forçamos o formulário interno a ocupar mais espaço dentro do card */
+.card-login form {
+    max-width: 620px;   /* Aumentamos de 420px para 620px para os inputs preencherem os lados */
+    width: 100%;
+    margin: 0 auto;     /* Centraliza o formulário dentro do espaço branco */
+}
+
+/* Deixamos os inputs ligeiramente mais robustos e altos, combinando com o tamanho do card */
+.input-custom {
+    border: 1px solid #a0a0a0 !important;
+    border-radius: 14px !important; /* Bordas um pouco mais arredondadas para o tamanho novo */
+    padding: 16px 16px 16px 48px !important; /* Inputs ligeiramente mais altos (de 12px para 16px) */
+    font-size: 1.05rem !important; /* Texto interno um pouco maior */
+}
+
+/* Reposiciona o ícone para acompanhar o novo tamanho do input */
+.icon-input {
+    position: absolute;
+    left: 18px;
+    color: #a0a0a0;
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+.btn-entrar-curto {
+    width: 340px; /* Aumentamos para manter a harmonia visual com os campos mais largos */
+    padding: 14px 0 !important; /* Deixa o botão um pouco mais alto e imponente */
+    font-size: 1.15rem !important;
+}
+
+/* Criamos essa nova regra para limitar o tamanho do conteúdo de dentro */
+
+
+/* ==========================================================================
+   7. TELA DE LOGIN
+   ========================================================================== */
+
+/* Fundo da tela de login igual ao azul do site principal */
+.body-login {
+    background-color: #36ABD9 !important;
+    padding-top: 0 !important;
+    /* Remove o padding da navbar caso use a tela cheia */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Card Branco Centralizado */
+/* Card Branco Centralizado */
+
+/* Círculo Laranja da Logo */
+.logo-login {
+    background-color: #ff9100;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Títulos */
+.titulo-login {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #000000;
+}
+
+.subtitulo-login {
+    color: #7A178C;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.label-custom {
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 6px;
+}
+
+/* Wrapper para colocar o ícone por cima do input */
+.input-group-custom {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Ícone cinza dentro do campo */
+.icon-input {
+    position: absolute;
+    left: 15px;
+    color: #a0a0a0;
+    font-size: 1.1rem;
+    pointer-events: none;
+    /* Garante que o clique passe para o input */
+}
+
+/* Estilização do Input Arredondado */
+.input-custom {
+    border: 1px solid #a0a0a0 !important;
+    border-radius: 12px !important;
+    padding: 12px 12px 12px 42px !important;
+    /* Espaço extra na esquerda (42px) pro ícone */
+    font-size: 0.95rem;
+}
+
+.input-custom::placeholder {
+    color: #c0c0c0;
+}
+
+.input-custom:focus {
+    border-color: #36ABD9 !important;
+    box-shadow: 0 0 0 0.25rem rgba(54, 171, 217, 0.25) !important;
+}
+
+/* Checkbox e Links */
+.label-check {
+    font-weight: 600;
+    color: #000000;
+}
+
+.check-custom {
+    border-color: #a0a0a0 !important;
+}
+
+.link-roxo {
+    color: #7A178C;
+}
+
+.link-roxo:hover {
+    color: #5c1069;
+    text-decoration: underline !important;
+}
+
+/* Botão Azul com Sombra Sutil */
+.btn-entrar {
+    background-color: #36ABD9 !important;
+    color: white !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(54, 171, 217, 0.4);
+    transition: all 0.2s ease;
+}
+
+.btn-entrar:hover {
+    background-color: #2b94bd !important;
+}
+
+/* Divisor "ou" com linhas laterais */
+.divisor-login {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #7A178C;
+}
+
+.divisor-login::before,
+.divisor-login::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.divisor-login:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.divisor-login:not(:empty)::after {
+    margin-left: .5em;
+}
+
+.texto-cadastro {
+    color: #000000;
+}
+
+
+
+
+
+/* Customização para o Card de Cadastro liberar altura automática */
+.card-cadastro {
+    height: auto !important; /* Sobrescreve os 760px fixos apenas na tela de cadastro */
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+
+/* Inputs limpos (sem o ícone na esquerda para dar mais espaço de digitação) */
+.input-custom-clean {
+    border: 1px solid #a0a0a0 !important;
+    border-radius: 12px !important;
+    padding: 10px 15px !important;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+.input-custom-clean:focus {
+    border-color: #36ABD9 !important;
+    box-shadow: 0 0 0 0.25rem rgba(54, 171, 217, 0.25) !important;
+}
+
+/* Alinhamento dos ícones de "olhinho" nos campos de senha */
+.icon-senha-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0a0a0;
+    cursor: pointer;
+}
+
+/* Botão de transição superior "Entrar" */
+.btn-outline-purple {
+    border-color: #7A178C !important;
+    color: #7A178C !important;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-purple:hover {
+    background-color: #7A178C !important;
+    color: #ffffff !important;
+}
+
+/* Estilização dos Radio Buttons customizados */
+.radio-custom:checked {
+    background-color: #7A178C !important;
+    border-color: #7A178C !important;
+}
+
+.label-radio {
+    font-weight: 500;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* Faixa de Alerta Laranja para Requisitos de Senha */
+.alert-senha {
+    background-color: #FFEAD2;
+    color: #D97706;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid #FCD34D;
+}
+
+.alert-senha i {
+    font-size: 1rem;
+}
+
+/* Ajuste no cabeçalho do card */
+.header-cadastro {
+    margin-top: -10px;
+}
+
+
+/* ==========================================================================
+   FAIXA DE ATENDIMENTO EMERGENCIAL & ELEMENTOS VISUAIS
+   ========================================================================== */
+
+/* Fundo laranja claro da faixa de emergência */
+.alert-emergencia {
+    background-color: #FFEAD2 !important; /* Cor idêntica à do Figma */
+    border: 1px solid #FF9100;
+}
+
+/* Cor do número de telefone em destaque */
+.phone-number {
+    color: #000000;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* CONTAINER DAS ABAS (Arredondamento e fundo cinza claro) */
+.container-abas {
+    background-color: #EFEFEF; /* Cor de fundo da aba inativa */
+    border: 1px solid #E0E0E0;
+}
+
+/* Estilo geral dos botões de Aba */
+.btn-aba {
+    border: none !important;
+    border-radius: 0 !important;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+/* ABA ATIVA (Cor Laranja Forte do Figma) */
+.btn-aba.active {
+    background-color: #FF9100 !important; /* Laranja da aba selecionada */
+    color: #FFFFFF !important;
+    box-shadow: 0px 4px 10px rgba(255, 145, 0, 0.3);
+}
+
+/* ABA INATIVA (Texto apagado e fundo cinza) */
+.btn-aba.inactive {
+    background-color: #EFEFEF !important;
+    color: #A0A0A0 !important;
+}
+
+/* Efeito ao passar o mouse na aba inativa */
+.btn-aba.inactive:hover {
+    background-color: #E5E5E5 !important;
+    color: #606060 !important;
+}
+
+/* AS LINHAS LARANJAS SEPARADORAS */
+.linha-separadora {
+    height: 2px;
+    background-color: #FF9100 !important; /* Linha horizontal laranja */
+    border-radius: 2px;
+}
+
