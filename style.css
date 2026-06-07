@@ -400,3 +400,504 @@ h3{
     height: 49px;         /* Mantém a proporção quadradinha dos ícones */
     object-fit: contain;  /* Garante que a imagem não distorça ou fique esticada */
 }
+
+/* ==========================================================================
+   7. PÁGINA DE ADOÇÃO (NOVOS ESTILOS)
+   ========================================================================== */
+
+.font-baloo {
+    font-family: 'Baloo 2', sans-serif;
+}
+
+#adocao-banner {
+    background-color: #36ABD9;
+    background-image: url('img/fundo_nuvens_ou_patas.png'); /* Se tiver os patterns de patinhas de fundo */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 60px;
+    padding-bottom: 180px; /* Espaço para o card de filtros flutuar em cima */
+}
+
+.alerta-responsabilidade {
+    background-color: #7A178C;
+    max-width: 550px;
+}
+
+.pet-banner-img {
+    max-height: 380px;
+    object-fit: contain;
+    margin-bottom: -120px; /* Faz o doguinho interagir saindo do plano */
+}
+
+/* Container de Filtros Flutuante */
+.container-filtros-wrapper {
+    margin-top: -100px;
+    position: relative;
+    z-index: 10;
+}
+
+.card-filtros {
+    max-width: 950px;
+    border: none;
+}
+
+.filtro-titulo {
+    color: #7A178C;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Estilizando as Labels de Filtro para parecerem Botões Vazados */
+.btn-outline-filtro {
+    border: 2px solid #7A178C !important;
+    color: #7A178C !important;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 4px 15px;
+    text-align: center;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+/* Estado Marcado (Checked) do Filtro Dinâmico */
+.btn-check:checked + .btn-outline-filtro {
+    background-color: #7A178C !important;
+    color: white !important;
+}
+
+.btn-filtrar-submit {
+    background-color: #36ABD9;
+    color: white;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    padding: 8px 40px;
+}
+
+.btn-filtrar-submit:hover {
+    background-color: #2792ba;
+    color: white;
+}
+
+/* Seção da Vitrine */
+#vitrine-animais {
+    background-color: #FBEBD2; /* Cor de fundo creme amarelada da imagem */
+    padding-top: 150px;
+    padding-bottom: 5px;
+}
+
+/* Grid Customizado de 3 Colunas Perfeitas */
+.custom-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    max-width: 1050px;
+}
+
+.pet-card-item {
+    border: none;
+    transition: transform 0.2s ease;
+}
+
+.pet-card-item:hover {
+    transform: translateY(-5px);
+}
+
+.img-wrapper {
+    height: 240px;
+    overflow: hidden;
+}
+
+.pet-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Tag Roxa com Nome sobreposta na Imagem */
+.badge-tag {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    background-color: #7A178C;
+    color: white;
+    padding: 5px 25px 5px 15px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.pet-info-box {
+    background-color: #ffffff;
+}
+
+.info-text {
+    font-size: 0.9rem;
+}
+
+.btn-saiba-mais {
+    background-color: #f38300;
+    color: white !important;
+    font-weight: 700;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-saiba-mais:hover {
+    background-color: #d17000;
+}
+
+/* Seção de Paginação */
+.text-purple {
+    color: #7A178C;
+}
+
+.pagination-arrows a {
+    font-weight: bold;
+    color: #7A178C;
+    transition: opacity 0.2s;
+}
+
+.pagination-arrows a:hover {
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   ANATOMIA DOS FUNDOS E ENCAIXES (ADOÇÃO)
+   ========================================================================== */
+
+/* --- SECTION 1: TOPO AZUL --- */
+#adocao-banner {
+    background-color: #36ABD9; /* Cor base caso a imagem falhe */
+    
+    /* REPLACE: Se você tiver uma imagem de pattern (ex: pegadas/nuvens), mude aqui */
+    background-image: url('img/fome1.png'); 
+    background-repeat: no-repeat;
+    background-position: center bottom; /* Alinha o corte/curva na base da seção */
+    background-size: cover;
+    
+    /* Espaçamentos cruciais para a matemática do encaixe */
+    padding-top: 120px;    /* Dá respiro por causa da Navbar Fixa */
+    padding-bottom: 180px; /* Espaço de segurança para o card de filtros flutuar */
+    position: relative;    /* Permite que o card de filtros use o bottom absoluto */
+    width: 100%;
+}
+
+/* Ajuste fino dos elementos internos do Banner */
+.banner-titulo {
+    color: #ffffff;
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.banner-subtitulo {
+    color: #ffffff;
+    max-width: 600px;
+}
+
+.alerta-responsabilidade {
+    background-color: #7A178C;
+    max-width: 550px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Faz o cachorro interagir e "sair" da seção azul */
+.img-container-dog {
+    position: relative;
+    align-self: flex-end;
+}
+
+.pet-banner-img {
+    max-height: 420px; /* Aumentado ligeiramente para combinar com a imagem */
+    object-fit: contain;
+    position: relative;
+    z-index: 11; /* Garante que fique por cima do card de filtros */
+    
+    /* Força o deslocamento: 
+       -60px empurra para a ESQUERDA 
+       -70px empurra para CIMA */
+    transform: translate(-120px, -80px); 
+    
+    /* Mantém a margem para não quebrar o cálculo do fluxo da página */
+    margin-bottom: -230px; 
+}
+
+
+/* --- A MÁGICA DO ENCAIXE: CARD BRANCO FLUTUANTE --- */
+.container-filtros-wrapper {
+    position: absolute;
+    bottom: -260px; /* Joga exatamente metade do card para dentro da section creme */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o bloco na horizontal de forma responsiva */
+    z-index: 10;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.card-filtros {
+    max-width: 950px;
+    border: none;
+    background-color: #ffffff;
+}
+
+
+/* --- SECTION 2: MIOLO CREME --- */
+#vitrine-animais {
+    background-color: #FBEBD2; /* Cor creme de fundo do exemplo */
+    
+    /* REPLACE: Se o seu fundo creme tiver texturas ou manchas laranjas nas laterais */
+    background-image: url('img/fome2.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+
+    /* Compensação matemática: como o filtro invadiu 90px desta seção, 
+       o padding-top alto impede que os primeiros cards sumam atrás dele */
+    padding-top: 340px; 
+    padding-bottom: 100px;
+    width: 100%;
+}
+
+
+/* --- SECTION 3: RODAPÉ ROXO --- */
+#final2 {
+    background-color: #FFD49D; /* Mantém a cor de trás idêntica para evitar linhas brancas */
+}
+
+.footer-custom {
+    /* REPLACE: Sua imagem com a onda roxa subindo (Frame1.png) */
+    background-image: url("img/Frame1.png"); 
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 100%; /* Força o vetor a cobrir toda a área do footer */
+    background-color: transparent; 
+
+    margin-top: -5px; /* Truque visual: elimina frestas milimétricas de renderização de navegadores */
+    padding-top: 180px; /* Empurra o texto para baixo para não sobrepor a onda */
+    padding-bottom: 60px;
+}
+
+
+/* ==========================================================================
+   ESTILOS COMPLEMENTARES DE INTERFACE (BOTÕES E LABELS)
+   ========================================================================== */
+
+.filtro-titulo {
+    color: #7A178C;
+    font-weight: 700;
+}
+
+/* Botões vazados dos Filtros */
+.btn-outline-filtro {
+    border: 2px solid #7A178C !important;
+    color: #7A178C !important;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 6px 14px;
+    transition: all 0.2s ease;
+}
+
+/* Estado quando o input hidden do Bootstrap é selecionado */
+.btn-check:checked + .btn-outline-filtro {
+    background-color: #7A178C !important;
+    color: #ffffff !important;
+}
+
+/* Botão Azul de Lupa */
+.btn-filtrar-submit {
+    background-color: #36ABD9;
+    color: #ffffff;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    padding: 10px 45px;
+    transition: background-color 0.2s;
+}
+
+.btn-filtrar-submit:hover {
+    background-color: #268cae;
+    color: #ffffff;
+}
+
+/* Grid de Organização dos Pets */
+.custom-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    max-width: 1050px;
+}
+
+/* Elementos dos Cards de Pets */
+/* --- Ajuste do container da Imagem para criar a borda em volta --- */
+.img-wrapper {
+    height: 240px;
+    overflow: hidden;
+    padding: 12px 12px 0 12px; /* Cria o espaçamento interno (borda branca nas laterais e topo) */
+    background-color: #ffffff;  /* Garante que o fundo do espaçamento seja branco */
+}
+
+/* --- Garante que a imagem herde o arredondamento dos cantos superiores --- */
+.pet-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px; /* Deixa a imagem interna arredondada acompanhando o card */
+}
+
+/* --- Ajuste da tag roxa do nome para não sumir com o padding --- */
+.badge-tag {
+    position: absolute;
+    bottom: 15px;
+    left: 12px; /* Alinha o início da tag com a borda da imagem */
+    background-color: #7A178C;
+    color: white;
+    padding: 5px 25px 5px 15px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* --- Estilização dos novos ícones salvos na vitrine --- */
+.icon-vitrine {
+    width: 18px;          /* Tamanho sutil para os ícones de idade e sexo */
+    height: 18px;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-saiba-mais {
+    background-color: #f38300;
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+.text-purple {
+    color: #7A178C;
+}
+
+/* Estilização para as imagens dos ícones do filtro */
+.icon-filtro-card {
+  width: 22px;          /* Ajuste o tamanho para mais ou para menos se achar necessário */
+  height: 22px;
+  object-fit: contain;  /* Mantém a proporção correta da imagem sem distorcer */
+  display: inline-block;
+}
+
+.meu-container-wrapper {
+  padding-top: 140px;
+  padding-bottom: 120px; /* Dá espaço para a onda aparecer embaixo do card */
+  background-color: transparent;
+  position: relative;
+}
+
+
+/* Espaçador para o card não sumir atrás da navbar que é fixa */
+.meu-container-wrapper {
+  padding-top: 140px;
+  padding-bottom: 60px;
+}
+
+/* CENTRALIZA O CARD NO MEIO DA TELA */
+.meu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* SEU CARD ORIGINAL (Com pequenas correções de conflito) */
+.meu-card {
+  background: #ffffff; /* Fundo branco limpo igual ao protótipo */
+  width: 900px;
+  max-width: 95%; /* Evita quebrar em telas menores */
+  border-radius: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Alinha o topo do texto com o topo da foto */
+  padding: 40px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* COLUNA DO TEXTO */
+.info {
+  width: 55%;
+}
+
+.info h5 {
+  text-align: left; /* Alinhado à esquerda igual na imagem */
+  color: #6a1b9a;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* DUAS COLUNAS DE DADOS */
+.grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid p {
+  margin-bottom: 12px;
+}
+
+
+
+
+
+.descricao {
+  margin-top: 30px;
+  color: #444;
+}
+
+/* COLUNA DA DIREITA (JUNTA FOTO + BOTÃO) */
+.lado-direito {
+  width: 38%;
+  display: flex;
+  flex-direction: column; /* Coloca o botão DEBAIXO da foto */
+  align-items: center;
+}
+
+/* CONTAINER DA IMAGEM */
+.imagem {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Força a foto a ser perfeitamente quadrada */
+  border-radius: 16px;
+  overflow: hidden; /* Corta rebarbas se a foto for retangular */
+  margin-bottom: 20px; /* Dá espaço para o botão abaixo */
+}
+
+.imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta a imagem sem distorcer ou esticar */
+}
+
+/* SEU BOTÃO ORIGINAL */
+.meu-botao {
+  background: #ED8400;/* Tom de ouro/laranja idêntico ao seu layout */
+  color: white;
+  border: none;
+  padding: 12px 0;
+  width: 100%; /* Deixa o botão da exata largura da foto */
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s ease;
+}
+
+.meu-botao:hover {
+  background: #aa650a;
+}
+
+#final3 {
+    background-color: #36ABD9;
+}
