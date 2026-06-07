@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adoção</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="formulario.css">
+
+
+</head>
+
+<body class="pagina-formulario">
+
+    <!-- NAVBAR PADRÃO (Herdada e adaptada do seu index) -->
+    <nav class="navbar navbar-expand-lg custom-nav fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img id="ARCA" src="img/ARCA_LOGO.png" alt="Logo ARCA"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Serviços
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- Link ativo na página atual -->
+                            <li><a class="dropdown-item active" href="adocao.html">Adoção</a></li>
+                            <li><a class="dropdown-item" href="#">Castração</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="denuncia.html">Denúncia e Resgate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contatos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre Nós</a>
+                    </li>
+                </ul>
+
+                <!-- Menu de Perfil do Usuário Logado à direita (Conforme imagem) -->
+                <div class="d-flex align-items-center gap-2 ms-auto usuario-perfil-nav">
+                    <span class="text-white fw-medium d-none d-sm-inline">Usuário</span>
+                    <div class="avatar-nav">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTAINER PRINCIPAL DO FORMULÁRIO -->
+    <main class="container d-flex justify-content-center align-items-center secao-form-main">
+        <div class="card-formulario shadow-lg p-4 p-md-5 bg-white">
+
+            <!-- Título Principal -->
+            <div class="position-relative text-center mb-5 d-flex align-items-center justify-content-center gap-3">
+                <div class="linha-decorativa flex-grow-1 d-none d-sm-block"></div>
+                <h2 class="titulo-principal-form m-0">Formulário de Adoção</h2>
+                <div class="linha-decorativa flex-grow-1 d-none d-sm-block"></div>
+            </div>
+
+            <form>
+                <!-- DUAS COLUNAS PRINCIPAIS -->
+                <div class="row g-4 g-md-5 text-start">
+
+                    <!-- COLUNA DA ESQUERDA: Perfil do Adotante -->
+                    <div class="col-12 col-md-6">
+                        <h5 class="subtitulo-form mb-3 d-flex align-items-center gap-2">
+                            <img src="img/icone.png" alt="Ícone Perfil" class="imagem-icone-titulo">
+                            Perfil do Adotante
+                        </h5>
+
+                        <div class="mb-3">
+                            <label for="ocupacao" class="form-label label-custom">Ocupação</label>
+                            <input type="text" id="ocupacao" class="form-control input-custom"
+                                placeholder="Escreva sua ocupação" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label label-custom d-block">Já possui outros animais?</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input radio-custom" type="radio" name="possuiAnimais"
+                                    id="possuiSim" value="Sim">
+                                <label class="form-check-label small" for="possuiSim">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input radio-custom" type="radio" name="possuiAnimais"
+                                    id="possuiNao" value="Não" checked>
+                                <label class="form-check-label small" for="possuiNao">Não</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="quantosAnimais" class="form-label label-custom">Possui outros animais?</label>
+                            <input type="text" id="quantosAnimais" class="form-control input-custom"
+                                placeholder="Escreva quantos e quais animais se possui">
+                        </div>
+                    </div>
+
+                    <!-- COLUNA DA DIREITA: Informações da Adoção -->
+                    <div class="col-12 col-md-6">
+                        <h5 class="subtitulo-form mb-3 d-flex align-items-center gap-2">
+                            <img src="img/patinhaicon.png" alt="Ícone Patinha" class="imagem-icone-titulo">
+                            Informações da Adoção
+                        </h5>
+
+                        <div class="mb-3">
+                            <label for="codigoAnimal" class="form-label label-custom">Código do animal</label>
+                            <input type="text" id="codigoAnimal" class="form-control input-custom"
+                                placeholder="Escreva o código do animal" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="motivoAdocao" class="form-label label-custom">Por que deseja adotar esse
+                                animal?</label>
+                            <textarea id="motivoAdocao" class="form-control textarea-custom" rows="5"
+                                placeholder="Escreva um pequeno resumo" required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4 border-secondary opacity-25">
+
+                <!-- PARTE INFERIOR: Termos e Responsabilidades -->
+                <div class="text-start">
+                    <h5 class="subtitulo-form mb-3 d-flex align-items-center gap-2">
+                        <img src="img/termo.png" alt="Ícone Termos" class="imagem-icone-titulo">
+                        Termos e Responsabilidades
+                    </h5>
+
+                    <!-- Termo 1 -->
+                    <div
+                        class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center mb-3 py-1">
+                        <p class="text-termo m-0 mb-2 mb-sm-0">Está ciente de que o animal precisa de cuidados
+                            contínuos?</p>
+                        <div class="d-flex gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input radio-custom" type="radio" name="termoCuidados"
+                                    id="cuidadosSim" value="Sim" required>
+                                <label class="form-check-label small" for="cuidadosSim">Sim</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Termo 2 -->
+                    <div
+                        class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center mb-4 py-1">
+                        <p class="text-termo m-0 mb-2 mb-sm-0">Concorda com possível acompanhamento da adoção?</p>
+                        <div class="d-flex gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input radio-custom" type="radio" name="termoAcompanhamento"
+                                    id="acompanhamentoSim" value="Sim" required>
+                                <label class="form-check-label small" for="acompanhamentoSim">Sim</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botão centralizado de envio -->
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-enviar-form rounded-pill px-5 py-2 fw-semibold shadow-sm">
+                        Enviar formulário
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

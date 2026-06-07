@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESGATE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="login.css">
+
+
+
+
+</head>
+
+<body id="resgate">
+
+    <div class="container-fluid d-flex justify-content-center justify-content-md-end align-items-center min-vh-100 p-0">
+
+        <div class="col-12 col-md-5 metade-esquerda-fundo d-flex flex-column justify-content-between p-5">
+            <a href="index.html" class="logo-superior-esquerda">
+                <img src="img/ARCA_LOGO.png" alt="Logo do Programa Arca">
+            </a>
+        </div>
+
+        <div class="col-12 col-md-7 metade-direita-login d-flex align-items-center justify-content-center p-4">
+
+            <div class="card-login card-cadastro p-4 p-md-5 rounded-4 shadow-lg text-center">
+
+                <div class="alert-emergencia d-flex align-items-center justify-content-between p-3 rounded-3 mb-4">
+                    <div class="d-flex align-items-center gap-2 text-start">
+                        <i class="bi bi-exclamation-triangle-fill text-warning fs-4"></i>
+                        <div>
+                            <strong class="d-block text-dark small-title">ATENDIMENTO EMERGENCIAL</strong>
+                            <span class="text-muted extra-small">Para casos de extrema urgência, ligue:</span>
+                        </div>
+                    </div>
+                    <div class="phone-number d-flex align-items-center gap-2">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span>(27) 00000-0000</span>
+                    </div>
+                </div>
+
+                <div class="row g-0 mb-4 container-abas rounded-3 overflow-hidden">
+                    <div class="col-6">
+                        <button class="btn btn-aba inactive w-100 py-2 fw-bold" onclick="irParaAba('denuncia')">DENÚNCIA</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-aba active w-100 py-2 fw-bold" onclick="irParaAba('resgate')">RESGATE</button>
+                    </div>
+                </div>
+
+                <form>
+                    <div class="text-start mb-3 d-flex align-items-center gap-2 secao-titulo-linha">
+                        <div class="d-flex align-items-center gap-2 me-2">
+                            <i class="bi bi-geo-alt-fill text-warning"></i>
+                            <h5 class="m-0 fw-bold fs-6 text-dark text-nowrap">Localização do animal</h5>
+                        </div>
+                        <div class="linha-separadora flex-grow-1"></div>
+                    </div>
+
+                    <div class="row g-3 mb-3 text-start">
+                        <div class="col-12 col-md-6">
+                            <label for="cep" class="form-label label-custom">CEP</label>
+                            <div class="position-relative d-flex align-items-center">
+                                <input type="text" id="cep" class="form-control input-custom-clean pe-5" placeholder="00000-000" required>
+                                <i class="bi bi-search position-absolute" style="right: 15px; color: #a0a0a0; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="bairro" class="form-label label-custom">Bairro</label>
+                            <input type="text" id="bairro" class="form-control input-custom-clean" placeholder="Digite seu bairro" required>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-4 text-start">
+                        <div class="col-12 col-md-6">
+                            <label for="rua" class="form-label label-custom">Rua</label>
+                            <input type="text" id="rua" class="form-control input-custom-clean" placeholder="Digite sua rua" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="numero" class="form-label label-custom">Número</label>
+                            <input type="text" id="numero" class="form-control input-custom-clean" placeholder="Digite o número da residência" required>
+                        </div>
+                    </div>
+
+                    <div class="text-start mb-3 d-flex align-items-center gap-2 secao-titulo-linha">
+                        <div class="d-flex align-items-center gap-2 me-2">
+                            <i class="bi bi-paw-fill text-warning"></i>
+                            <h5 class="m-0 fw-bold fs-6 text-dark text-nowrap">Informações do animal</h5>
+                        </div>
+                        <div class="linha-separadora flex-grow-1"></div>
+                    </div>
+
+                    <div class="row g-3 mb-3 text-start">
+                        <div class="col-12 col-md-4">
+                            <label for="especie" class="form-label label-custom">Espécie</label>
+                            <select id="especie" class="form-select input-custom-clean" required>
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="Cachorro">Cachorro</option>
+                                <option value="Gato">Gato</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label for="idade" class="form-label label-custom">Idade aproximada</label>
+                            <input type="text" id="idade" class="form-control input-custom-clean" placeholder="Ex: 2 anos">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label for="sexo" class="form-label label-custom">Sexo</label>
+                            <select id="sexo" class="form-select input-custom-clean" required>
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="Macho">Macho</option>
+                                <option value="Fêmea">Fêmea</option>
+                                <option value="Não sei">Não sei</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 text-start">
+                        <label for="situacao" class="form-label label-custom">Situação do animal</label>
+                        <textarea id="situacao" class="form-control textarea-custom input-custom-clean" rows="3" placeholder="Descreva a situação do animal, estado de saúde aparente, comportamento, riscos do local etc." required></textarea>
+                    </div>
+
+                    <div class="mb-4 text-start">
+                        <label class="form-label label-custom d-block mb-2">Nível de urgência</label>
+                        <div class="form-check form-check-inline me-3">
+                            <input class="form-check-input radio-urgencia" type="radio" name="urgencia" id="baixa" value="Baixa">
+                            <label class="form-check-label label-radio small" for="baixa">Baixa</label>
+                        </div>
+                        <div class="form-check form-check-inline me-3">
+                            <input class="form-check-input radio-urgencia" type="radio" name="urgencia" id="media" value="Média">
+                            <label class="form-check-label label-radio small" for="media">Média</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input radio-urgencia radio-alta" type="radio" name="urgencia" id="alta" value="Alta" checked>
+                            <label class="form-check-label label-radio small" for="alta">Alta</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-entrar btn-entrar-curto rounded-pill py-2 mb-2 d-flex align-items-center justify-content-center gap-2 mx-auto">
+                        <i class="bi bi-file-text"></i> Enviar formulário
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function irParaAba(tipo) {
+            if (tipo === 'resgate') {
+                window.location.href = 'resgate.html';
+            } else if (tipo === 'denuncia') {
+                window.location.href = 'denuncia.html';
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

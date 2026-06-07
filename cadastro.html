@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADASTRO ARCA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="login.css">
+
+
+</head>
+
+<body>
+
+   <div class="container-fluid d-flex justify-content-center justify-content-md-end align-items-center min-vh-100 p-0">
+
+        <div class="col-12 col-md-5 metade-esquerda-fundo">
+            <a href="index.html" class="logo-superior-esquerda">
+                <img src="img/ARCA_LOGO.png" alt="Logo do Programa Arca">
+            </a>
+        </div>
+
+        <div class="col-12 col-md-7 metade-direita-login d-flex align-items-center justify-content-center p-4">
+
+            <div class="card-login card-cadastro p-4 p-md-5 rounded-4 shadow-lg text-center">
+
+                <div class="d-flex justify-content-end align-items-center mb-3 gap-2 header-cadastro">
+                    <span class="small text-muted">Já possui uma conta?</span>
+                    <a href="login.html" class="btn btn-outline-purple btn-sm rounded-pill px-3">
+                        <i class="bi bi-box-arrow-in-right me-1"></i> Entrar
+                    </a>
+                </div>
+
+                <div class="logo-login mx-auto mb-3">
+                    <img src="img/patafundo.png" alt="Logo Patinha">
+                </div>
+
+                <h2 class="titulo-login mb-1">Cadastre-se</h2>
+                <p class="subtitulo-login mb-4">Preencha os dados da sua organização para criar sua conta</p>
+
+                <form>
+                    <div class="mb-4 text-start">
+                        <label class="form-label label-custom d-block">Tipo de cadastro</label>
+                        <div class="form-check form-check-inline me-4">
+                            <input class="form-check-input radio-custom" type="radio" name="tipoCadastro" id="pf" value="PF" onclick="irParaCadastro('pf')" >
+                            <a href="CPF.html"><label class="form-check-label label-radio" for="pf">Pessoa física (CPF)</label></a>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input radio-custom" type="radio" name="tipoCadastro" id="pj" value="PJ" checked onclick="irParaCadastro('pj')">
+                            <label class="form-check-label label-radio" for="pj">Pessoa Jurídica / ONG (CNPJ)</label>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-3 text-start">
+                        <div class="col-12 col-md-6">
+                            <label for="nomeOrg" class="form-label label-custom">Nome da organização</label>
+                            <input type="text" id="nomeOrg" class="form-control input-custom-clean" placeholder="Digite o nome da organização" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="razaoSocial" class="form-label label-custom">Razão Social</label>
+                            <input type="text" id="razaoSocial" class="form-control input-custom-clean" placeholder="Digite a razão social" required>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-3 text-start">
+                        <div class="col-12 col-md-6">
+                            <label for="tipoOrg" class="form-label label-custom">Tipo de Organização</label>
+                            <input type="text" id="tipoOrg" class="form-control input-custom-clean" placeholder="Digite o tipo de organização" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="cnpj" class="form-label label-custom">CNPJ</label>
+                            <input type="text" id="cnpj" class="form-control input-custom-clean" placeholder="00.000.000/0000-00" required>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-3 text-start">
+                        <div class="col-12 col-md-6">
+                            <label for="email" class="form-label label-custom">E-mail</label>
+                            <input type="email" id="email" class="form-control input-custom-clean" placeholder="Digite o e-mail de contato" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="cep" class="form-label label-custom">CEP</label>
+                            <input type="text" id="cep" class="form-control input-custom-clean" placeholder="00000-000" required>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-3 text-start">
+                        <div class="col-12 col-md-6">
+                            <label for="telefone" class="form-label label-custom">Telefone</label>
+                            <input type="tel" id="telefone" class="form-control input-custom-clean" placeholder="(00) 00000-0000" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="endereco" class="form-label label-custom">Endereço</label>
+                            <input type="text" id="endereco" class="form-control input-custom-clean" placeholder="Estado, Cidade, Bairro, Rua, Nº" required>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-3 text-start">
+                        <div class="col-12 col-md-6">
+                            <label for="senha" class="form-label label-custom">Senha</label>
+                            <div class="position-relative">
+                                <input type="password" id="senha" class="form-control input-custom-clean pe-5" placeholder="Crie uma senha segura" required>
+                                <i class="bi bi-eye-slash icon-senha-toggle"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="confirmarSenha" class="form-label label-custom">Confirmar senha</label>
+                            <div class="position-relative">
+                                <input type="password" id="confirmarSenha" class="form-control input-custom-clean pe-5" placeholder="Confirme sua senha" required>
+                                <i class="bi bi-eye-slash icon-senha-toggle"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert-senha mb-4 text-start p-2 rounded-3 d-flex align-items-center gap-2">
+                        <i class="bi bi-shield-lock-fill"></i>
+                        <span>Sua senha deve conter pelo menos 8 caracteres, incluindo letras e números</span>
+                    </div>
+
+                    <button type="submit" class="btn btn-entrar btn-entrar-curto rounded-pill py-2 mb-2 d-flex align-items-center justify-content-center gap-2 mx-auto">
+                        <i class="bi bi-person-plus"></i> Criar minha conta
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function irParaCadastro(tipo) {
+            if (tipo === 'pf') {
+                // Redireciona para a página de Pessoa Física
+                window.location.href = 'cadastro-pf.html';
+            } else if (tipo === 'pj') {
+                // Redireciona para a página de Pessoa Jurídica (esta atual)
+                window.location.href = 'cadastro.html'; 
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>

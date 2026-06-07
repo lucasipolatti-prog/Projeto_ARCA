@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DENÚNCIA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body id="denuncia">
+    <div class="container-fluid d-flex justify-content-center justify-content-md-end align-items-center min-vh-100 p-0">
+
+        <!-- METADE ESQUERDA: Textos de Impacto e Proteção de Dados -->
+        <div class="col-12 col-md-5 metade-esquerda-fundo d-flex flex-column justify-content-between p-5">
+            <a href="index.html" class="logo-superior-esquerda">
+                <img src="img/ARCA_LOGO.png" alt="Logo do Programa Arca">
+            </a>
+
+            <!-- Conteúdo de texto centralizado na esquerda se preferir fazer via HTML em vez de imagem fixa -->
+            <!-- 
+            <div class="mt-5 pt-5 text-white">
+                <h1 class="fw-bold text-warning">Sua ação pode salvar vidas.</h1>
+                <p>Denuncie casos de maus-tratos e contribua para um mundo mais justo para os animais.</p>
+            </div>
+            <div class="text-white small d-flex align-items-center gap-2 mb-4">
+                <i class="bi bi-shield-check fs-4"></i>
+                <span>Seus dados estão protegidos. Suas informações são utilizadas apenas para apuração da denúncia.</span>
+            </div> 
+            -->
+        </div>
+
+        <!-- METADE DIREITA: Card de Denúncia -->
+        <div class="col-12 col-md-7 metade-direita-login d-flex align-items-center justify-content-center p-4">
+
+            <div class="card-login card-cadastro p-4 p-md-5 rounded-4 shadow-lg text-center">
+
+                <!-- FAIXA: Atendimento Emergencial -->
+                <div class="alert-emergencia d-flex align-items-center justify-content-between p-3 rounded-3 mb-4">
+                    <div class="d-flex align-items-center gap-2 text-start">
+                        <i class="bi bi-exclamation-triangle-fill text-warning fs-4"></i>
+                        <div>
+                            <strong class="d-block text-dark small-title">ATENDIMENTO EMERGENCIAL</strong>
+                            <span class="text-muted extra-small">Para casos de extrema urgência, ligue:</span>
+                        </div>
+                    </div>
+                    <div class="phone-number d-flex align-items-center gap-2">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span>(27) 00000-0000</span>
+                    </div>
+                </div>
+
+                <!-- SELETOR: Abas Alternáveis (Denúncia vs Resgate) -->
+                <div class="row g-0 mb-4 container-abas rounded-3 overflow-hidden">
+                    <div class="col-6">
+                        <button class="btn btn-aba active w-100 py-2 fw-bold"
+                            onclick="irParaAba('denuncia')">DENÚNCIA</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-aba inactive w-100 py-2 fw-bold"
+                            onclick="irParaAba('resgate')">RESGATE</button>
+                    </div>
+                </div>
+
+                <form>
+                    <!-- SEÇÃO 1: Informações do Local -->
+                    <div class="text-start mb-3 d-flex align-items-center gap-2 secao-titulo-linha">
+                        <div class="d-flex align-items-center gap-2 me-2">
+                            <i class="bi bi-geo-alt-fill text-warning"></i>
+                            <h5 class="m-0 fw-bold fs-6 text-dark text-nowrap">Informações do local</h5>
+                        </div>
+                        <div class="linha-separadora flex-grow-1"></div>
+                    </div>
+
+                    <div class="row g-3 mb-3 text-start">
+                        <div class="col-12 col-md-6">
+                            <label for="cep" class="form-label label-custom">CEP</label>
+                            <div class="position-relative d-flex align-items-center">
+                                <input type="text" id="cep" class="form-control input-custom-clean pe-5"
+                                    placeholder="00000-000" required>
+                                <i class="bi bi-search position-absolute"
+                                    style="right: 15px; color: #a0a0a0; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="bairro" class="form-label label-custom">Bairro</label>
+                            <input type="text" id="bairro" class="form-control input-custom-clean"
+                                placeholder="Digite seu bairro" required>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-4 text-start">
+                        <div class="col-12 col-md-6">
+                            <label for="rua" class="form-label label-custom">Rua</label>
+                            <input type="text" id="rua" class="form-control input-custom-clean"
+                                placeholder="Digite sua rua" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="numero" class="form-label label-custom">Número</label>
+                            <input type="text" id="numero" class="form-control input-custom-clean"
+                                placeholder="Digite o número da residência" required>
+                        </div>
+                    </div>
+
+                    <!-- SEÇÃO 2: Informações da Denúncia -->
+                    <div class="text-start mb-3 d-flex align-items-center gap-2 secao-titulo-linha">
+                        <div class="d-flex align-items-center gap-2 me-2">
+                            <i class="bi bi-file-earmark-text-fill text-warning"></i>
+                            <h5 class="m-0 fw-bold fs-6 text-dark text-nowrap">Informações da denúncia</h5>
+                        </div>
+                        <div class="linha-separadora flex-grow-1"></div>
+                    </div>
+
+                    <div class="row g-3 mb-3 text-start">
+                        <div class="col-12 col-md-6">
+                            <label for="nome" class="form-label label-custom">Nome <span
+                                    class="text-muted fw-normal">(opcional)</span></label>
+                            <input type="text" id="nome" class="form-control input-custom-clean"
+                                placeholder="Digite seu nome">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="telefone" class="form-label label-custom">Telefone</label>
+                            <input type="tel" id="telefone" class="form-control input-custom-clean"
+                                placeholder="(00) 00000-0000" required>
+                        </div>
+                    </div>
+
+                    <!-- Campo Descrição da Denúncia -->
+                    <div class="mb-3 text-start">
+                        <label for="descricao" class="form-label label-custom">Descrição da denúncia</label>
+                        <textarea id="descricao" class="form-control textarea-custom" rows="3"
+                            placeholder="Descreva o que está acontecendo, incluindo detalhes importantes como condições do animal, local, etc."
+                            required></textarea>
+                    </div>
+
+                    <!-- Seleção Nível de Urgência -->
+                    <div class="mb-4 text-start">
+                        <label class="form-label label-custom d-block mb-2">Nível de urgência</label>
+                        <div class="form-check form-check-inline me-3">
+                            <input class="form-check-input radio-urgencia" type="radio" name="urgencia" id="baixa"
+                                value="Baixa">
+                            <label class="form-check-label label-radio small" for="baixa">Baixa</label>
+                        </div>
+                        <div class="form-check form-check-inline me-3">
+                            <input class="form-check-input radio-urgencia" type="radio" name="urgencia" id="media"
+                                value="Média">
+                            <label class="form-check-label label-radio small" for="media">Média</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input radio-urgencia radio-alta" type="radio" name="urgencia"
+                                id="alta" value="Alta" checked>
+                            <label class="form-check-label label-radio small" for="alta">Alta</label>
+                        </div>
+                    </div>
+
+                    <!-- Botão de Enviar Denúncia -->
+                    <button type="submit"
+                        class="btn btn-entrar btn-entrar-curto rounded-pill py-2 mb-2 d-flex align-items-center justify-content-center gap-2 mx-auto">
+                        <i class="bi bi-file-text"></i> Enviar denúncia
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Script para alternar o clique das abas superiores -->
+    <script>
+        function irParaAba(tipo) {
+            if (tipo === 'resgate') {
+                window.location.href = 'resgate.html'; // Vai carregar a página correspondente
+            } else if (tipo === 'denuncia') {
+                window.location.href = 'denuncia.html';
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

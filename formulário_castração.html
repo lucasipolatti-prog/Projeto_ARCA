@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adoção</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="formulario.css">
+
+
+</head>
+
+<body class="pagina-formulario">
+
+    <!-- NAVBAR PADRÃO (Herdada e adaptada do seu index) -->
+    <nav class="navbar navbar-expand-lg custom-nav fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img id="ARCA" src="img/ARCA_LOGO.png" alt="Logo ARCA"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Serviços
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- Link ativo na página atual -->
+                            <li><a class="dropdown-item active" href="adocao.html">Adoção</a></li>
+                            <li><a class="dropdown-item" href="#">Castração</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="denuncia.html">Denúncia e Resgate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contatos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre Nós</a>
+                    </li>
+                </ul>
+
+                <!-- Menu de Perfil do Usuário Logado à direita (Conforme imagem) -->
+                <div class="d-flex align-items-center gap-2 ms-auto usuario-perfil-nav">
+                    <span class="text-white fw-medium d-none d-sm-inline">Usuário</span>
+                    <div class="avatar-nav">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTAINER PRINCIPAL DO FORMULÁRIO -->
+    <main class="container d-flex justify-content-center align-items-center secao-form-main">
+        <div class="card-formulario shadow-lg p-4 p-md-5 bg-white">
+
+            <!-- Título Principal -->
+            <div class="position-relative text-center mb-5 d-flex align-items-center justify-content-center gap-3">
+                <div class="linha-decorativa flex-grow-1 d-none d-sm-block"></div>
+                <h2 class="titulo-principal-form m-0">Agendamento de Castração</h2>
+                <div class="linha-decorativa flex-grow-1 d-none d-sm-block"></div>
+            </div>
+
+            <form>
+                <div class="row g-4 text-start">
+
+                    <div class="col-12 col-md-6">
+                        <h5 class="subtitulo-form mb-3 d-flex align-items-center gap-2">
+                            <img src="img/icone.png" alt="Ícone Informações" class="imagem-icone-titulo">
+                            Informações do animal
+                        </h5>
+
+                        <div class="mb-3">
+                            <label for="nomeAnimal" class="form-label label-custom">Nome do animal</label>
+                            <input type="text" id="nomeAnimal" class="form-control input-custom"
+                                placeholder="Escreva o nome do animal" required>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <label for="especie" class="form-label label-custom">Espécie</label>
+                                <select id="especie" class="form-select input-custom" required>
+                                    <option value="" selected disabled>Selecione</option>
+                                    <option value="Cachorro">Cachorro</option>
+                                    <option value="Gato">Gato</option>
+                                </select>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <label for="sexo" class="form-label label-custom">Sexo</label>
+                                <select id="sexo" class="form-select input-custom" required>
+                                    <option value="" selected disabled>Selecione</option>
+                                    <option value="Macho">Macho</option>
+                                    <option value="Fêmea">Fêmea</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4 mb-3">
+                                <label for="porte" class="form-label label-custom">Porte do animal</label>
+                                <select id="porte" class="form-select input-custom" required>
+                                    <option value="" selected disabled>Selecione</option>
+                                    <option value="Pequeno">Pequeno</option>
+                                    <option value="Médio">Médio</option>
+                                    <option value="Grande">Grande</option>
+                                </select>
+                            </div>
+                            <div class="col-4 mb-3">
+                                <label for="peso" class="form-label label-custom">Peso (kg)</label>
+                                <input type="text" id="peso" class="form-control input-custom"
+                                    placeholder="Escreva aproximadamente" required>
+                            </div>
+                            <div class="col-4 mb-3">
+                                <label for="idade" class="form-label label-custom">Idade</label>
+                                <input type="text" id="idade" class="form-control input-custom"
+                                    placeholder="Escreva aproximadamente" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <h5 class="subtitulo-form mb-3 d-flex align-items-center gap-2">
+                            <img src="img/patinhaicon.png" alt="Ícone Saúde" class="imagem-icone-titulo">
+                            Informações de Saúde
+                        </h5>
+
+                        <div class="mb-2 d-flex justify-content-between align-items-center py-1">
+                            <span class="text-termo small">Animal está vacinado?</span>
+                            <div class="d-flex gap-3">
+                                <label class="small"><input class="form-check-input radio-custom me-1" type="radio" name="vacinado" value="Sim"> Sim</label>
+                                <label class="small"><input class="form-check-input radio-custom me-1" type="radio" name="vacinado" value="Não" checked> Não</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-2 d-flex justify-content-between align-items-center py-1">
+                            <span class="text-termo small">Possui alguma doença?</span>
+                            <div class="d-flex gap-3">
+                                <label class="small"><input class="form-check-input radio-custom me-1" type="radio" name="doenca" value="Sim"> Sim</label>
+                                <label class="small"><input class="form-check-input radio-custom me-1" type="radio" name="doenca" value="Não" checked> Não</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-2">
+                            <input type="text" id="qualDoenca" class="form-control input-custom py-1" placeholder="Se sim, qual?">
+                        </div>
+
+                        <div class="mb-2 d-flex justify-content-between align-items-center py-1">
+                            <span class="text-termo small">Está gestante?</span>
+                            <div class="d-flex gap-3">
+                                <label class="small"><input class="form-check-input radio-custom me-1" type="radio" name="gestante" value="Sim"> Sim</label>
+                                <label class="small"><input class="form-check-input radio-custom me-1" type="radio" name="gestante" value="Não" checked> Não</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 d-flex justify-content-between align-items-center py-1">
+                            <span class="text-termo small">Está no cio? (Só para fêmeas)</span>
+                            <div class="d-flex gap-3">
+                                <label class="small"><input class="form-check-input radio-custom me-1" type="radio" name="cio" value="Sim"> Sim</label>
+                                <label class="small"><input class="form-check-input radio-custom me-1" type="radio" name="cio" value="Não" checked> Não</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4 border-secondary opacity-25">
+
+                <div class="row g-4 text-start align-items-end">
+                    <div class="col-12 col-md-6">
+                        <h5 class="subtitulo-form mb-3">Preferência de Agendamento</h5>
+                        
+                        <div class="mb-3">
+                            <label for="dataDesejada" class="form-label label-custom">Data desejada</label>
+                            <input type="date" id="dataDesejada" class="form-control input-custom" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label label-custom d-block">Período</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input radio-custom" type="radio" name="periodo" id="periodoManha" value="Manhã" checked>
+                                <label class="form-check-label small" for="periodoManha">Manhã</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input radio-custom" type="radio" name="periodo" id="periodoTarde" value="Tarde">
+                                <label class="form-check-label small" for="periodoTarde">Tarde</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="alerta-importante p-3 rounded-3" style="background-color: #FFEAD2; border: 1px solid #F38300;">
+                            <h6 class="fw-bold m-0 mb-1" style="color: #D36200;"><i class="bi bi-exclamation-triangle-fill"></i> Importante</h6>
+                            <p class="m-0 small text-secondary" style="line-height: 1.4;">Todas as solicitações passam por análise e o tutor será contatado para confirmação de data e horário.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <button type="submit" class="btn btn-enviar-form rounded-pill px-5 py-2 fw-semibold shadow-sm">
+                        Solicitar agendamento
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
